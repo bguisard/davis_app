@@ -3,8 +3,7 @@ import numpy as np
 import os
 import json
 
-# from TF model zoo
-# TODO: Incorporate this into the app code base
+# from TF model zoo - version provided on repo may be outdated
 from object_detection.utils import label_map_util as l_util
 from object_detection.utils import visualization_utils as vis_util
 
