@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../static/images/favicon.ico">
+
+    <title>Meet Davis</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="../../static/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="../../static/css/davis_main.css" rel="stylesheet">
+  </head>
+
+  <body>
+
+    <div class="collapse bg-dark" id="navbarHeader">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-10 py-4">
+            <h4 class="text-white">Davis: Deep Learning Analytics for Video Streams</h4>
+            <p class="text-white">
+              This project was developed during my time at Insight Data Science.
+            </p>
+          </div>
+          <div class="col-sm-2 py-4">
+            <h4 class="text-white">Contact</h4>
+            <ul class="list-unstyled">
+              <li><a href="https://www.linkedin.com/in/bruno-guisard/" target="_blank" class="text-white">LinkedIn</a></li>
+              <li><a href="https://github.com/bguisard" target="_blank" class="text-white">GitHub</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="navbar navbar-dark bg-dark">
+      <div class="container d-flex justify-content-between">
+        <a href="#" class="navbar-brand"> </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarHeader" aria-controls="navbarHeader" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      </div>
+    </div>
+
+    <section class="jumbotron text-center">
+      <div class="container">
+        <h1 class="jumbotron-heading">Meet Davis!</h1>
+        <p class="lead text-muted">
+          A Deep Learning agent that can recognize brands in real-time video streams
+        </p>
+        <p>
+          <a href="/live_demo" class="btn btn-primary">Live Demo</a>
+        </p>
+      </div>
+    </section>
+
+    <div class="album text-muted">
+      <div class="container">
+
+        <div class="row">
+          <div class="card">
+            <video id="myVideo" autoplay></video>
+            <p class="card-text">
+             Pre-recorded feed. To schedule a live demo please contact the author.
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+
+    <footer class="text-muted">
+      <div class="container">
+        <p class="float-right">
+          &copy; davis-ai.com 2017
+        </p>
+
+      </div>
+    </footer>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script>window.jQuery || document.write('<script src="../../../../assets/js/vendor/jquery.min.js"><\/script>')</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+
+    <script src="../../static/js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+
+      var videoSource = new Array();
+      var i = 0;
+      var fs = 
+
+      videoSource[0]='../static/videos/cocacola_annotated.mp4';
+      videoSource[1]='../static/videos/carlsberg_annotated.mp4';
+
+      var videoCount = videoSource.length;
+
+      document.getElementById("myVideo").setAttribute("src",videoSource[0]);
+
+      // Create a function to load and play the videos
+      function videoPlay(videoNum) {
+          document.getElementById("myVideo").setAttribute("src",videoSource[videoNum]);
+          document.getElementById("myVideo").load();
+          document.getElementById("myVideo").play();
+      }
+
+      document.getElementById('myVideo').addEventListener('ended',myHandler,false);
+
+      function myHandler() {
+          i++;
+          if(i == (videoCount)){
+              i = 0;
+              videoPlay(i);
+          } else{
+              videoPlay(i);
+          }
+      }
+
+    </script>
+  </body>
+</html>
