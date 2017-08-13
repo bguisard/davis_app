@@ -1,0 +1,26 @@
+.current {
+    display: inline-block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+}
+
+.upsampled {
+    display: inline-block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+}
+
+.imgContainer{
+    float: left;
+}
+
+p {
+    text-align: center;
+    font-size: 200%;
+}
+
+#images {
+    vertical-align: center;
+}
