@@ -83,14 +83,13 @@ py_log.info('##### END OF SERVER BOOT PROCESS #####')
 # FLASK APP                                                               #
 ###########################################################################
 is_stream = 0
-youtube_stream = 0
 
 
 def check_auth(username, password):
     """This function is called to check if a username /
     password combination is valid.
     """
-    return username == 'admin' and password == 'teste'
+    return username == 'admin' and password == 'temp'
 
 
 def authenticate():
