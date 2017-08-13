@@ -1,0 +1,22 @@
+# editor config
+.vscode/
+
+
+# models to ignore (too large to post to github)
+models/faster_rcnn_resnet101_50regions_flickr47
+
+
+# logs
+logs/
+
+# temp
+temp/
+
+# pycache
+__pycache__/
+
+# extensions to ignore
+*.csv
+*.bak
+*.txt
+*.pem
