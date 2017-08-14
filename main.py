@@ -141,6 +141,28 @@ def gen(output_q):
                + b'\r\n')
 
 
+def streaming_gen(streaming_folder):
+    path_to_folder = os.path.join(CWD_PATH, 'static', streaming_folder)
+    file_list = os.listdir(path_to_folder)
+    file_list.sort()
+    num_images = len(file_list)
+    current_image = 0
+    interval = 1./30  # Set streaming to 30fps
+    while True:
+        time.sleep(interval)
+        stream_img = Image.open(os.path.join(CWD_PATH, 'static',
+                                streaming_folder, file_list[current_image]))
+        img_io = io.BytesIO()
+        stream_img.save(img_io, 'JPEG')
+
+        current_image += 1
+        if current_image == num_images:
+            current_image = 0
+
+        yield (b'--frame\r\n'
+            b'Content-Type: image/jpeg\r\n\r\n' + img_io.getvalue()
+            + b'\r\n')
+
 @app.route('/')
 def index():
     """Davis homepage"""
@@ -191,6 +213,13 @@ def webcam_admin():
 def camera_feed():
     """Webcam streaming route. Put this in the src attrib of an img tag"""
     return Response(gen(output_q),
+                    mimetype='multipart/x-mixed-replace; boundary=frame')
+
+
+@app.route('/main_feed')
+def main_feed():
+    """Webcam streaming route. Put this in the src attrib of an img tag"""
+    return Response(streaming_gen('streaming'),
                     mimetype='multipart/x-mixed-replace; boundary=frame')
 
 
