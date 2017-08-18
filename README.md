@@ -2,7 +2,7 @@
 
 ## Web App
 
-This repo only contains the web app part of Davis, for the full model please visit Davis main repo (add link)
+This repo contains the web app that serves  Davis, for the full model please visit Davis main [repo](https://github.com/bguisard/davis).
 
 
 ## How to install
