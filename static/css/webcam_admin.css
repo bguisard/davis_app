@@ -8,3 +8,6 @@
     max-width: 100%;
     width: 480px;
 }
+.card > img{
+    width: 100%;
+}
