@@ -1,4 +1,4 @@
-# DAVIS: Deep Learning Analytics for Video Stream
+# DAVIS: Deep Learning Analytics for Video Streams
 
 ## Web App
 
