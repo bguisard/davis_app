@@ -30,8 +30,8 @@ openssl req -x509 -newkey rsa:4096 -nodes -out cert.pem -keyout key.pem -days 36
 pip install -r requirements.txt
 ```
 
-* Run gunicorn server
+* Run gunicorn server with certificate support
 
 ```
-./run.sh
+./run_cert.sh
 ```
