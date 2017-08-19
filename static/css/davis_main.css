@@ -7,6 +7,16 @@ body {
   background-color: #3097D1;
 }
 
+.navbar-dark .navbar-toggler {
+  color: rgba(255,255,255,1) !important;
+  border-color: #3097D1 !important;
+}
+
+.navbar-dark .navbar-toggler:focus {
+  border-color: #3097D1 !important;
+  outline: 0px auto;
+}
+
 .bg-dark {
       background-color: #3097D1 !important;
 }
