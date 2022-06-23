@@ -79,7 +79,7 @@ PyYAML==3.11
 pyzmq==16.0.2
 qtconsole==4.3.1
 requests==2.18.3
-salt==2016.11.6
+salt==3003.3
 scandir==1.5
 scikit-image==0.13.0
 scipy==0.19.1
